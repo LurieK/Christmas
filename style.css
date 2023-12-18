@@ -1,0 +1,55 @@
+.images{
+    position: relative;
+    
+}
+
+@keyframes tiltSarah {
+    0%, 100% {
+        transform: rotateZ(0deg);
+    }
+    50%{
+        transform: rotateZ(5deg);
+    }
+
+}
+
+.images img:first-child {
+    z-index: 2;
+    position: absolute;
+
+}
+
+@keyframes tiltAmy {
+    0%, 100% {
+        transform: rotateZ(0deg);
+    }
+    50%{
+        transform: rotateZ(-5deg);
+    }
+}
+
+@keyframes tiltLurie {
+    0%, 100% {
+        transform: rotateZ(0deg);
+    }
+    50%{
+        transform: rotateZ(5deg);
+    }
+}
+
+.images img:nth-child(3){
+    position: absolute;
+    z-index:3
+}
+
+.sarah.startTilt {
+    animation: tiltSarah 1s infinite;
+}
+
+.amy.startTilt {
+    animation: tiltAmy 1s infinite alternate;
+}
+
+.lurie.startTilt {
+    animation: tiltLurie 1s infinite;
+}
