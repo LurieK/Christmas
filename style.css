@@ -12,30 +12,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;  
-    position: relative;
-    z-index:1; 
-    border: 2.5px dashed #b10a0a;
+    flex-flow: column;
 }
 
-.circle-wrapper:active .circle {
-  animation: spin 2s linear infinite;
-}
-
-.circle {
-  animation: spin 10s linear infinite;
-
-}
-
-@keyframes spin { 
-  100% { 
-    transform: rotateZ(360deg);
-  }
-}
 
 
 h1{
     font-family: 'Cormorant', serif;
     font-size: 50px;
+    text-align: center;
 }
 
 .snowflake {
@@ -61,31 +46,36 @@ height: 100vh;
     justify-content: center;
     align-items: center;
     flex-flow: row;
-    margin-top: 50%;
+    margin-top: 10%;
 }
 
 
 
-.images img:first-child {
+.images .sarah {
     position: absolute;
     right: 50%;
     z-index: 2;
 }
 
 
-.images img:nth-child(2) {
+.images .amy {
     position: absolute;
     left: 33%;
     z-index: 1;
 }
 
 
-.images img:nth-child(3){
+.images .lurie{
     position: absolute;
     left: 50%;
     z-index: 3;
     
 }
+
+
+
+
+
 
 @keyframes tiltSarah {
     0%, 100% {
@@ -121,16 +111,26 @@ height: 100vh;
 }
 
 .amy.startTilt {
-    animation: tiltAmy 1s infinite alternate;
+    animation: tiltAmy 1s infinite;
 }
 
 .lurie.startTilt {
     animation: tiltLurie 1s infinite;
 }
 
+.drink.startTilt{
+    animation: tiltDrink 1s infinite;
+
+}
+
 .lurie, 
 .sarah, 
 .amy{
     width: 33%;
+}
+
+.drink{
+    width: 30%;
+    margin-top: 20%;
 }
 
