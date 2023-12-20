@@ -1,9 +1,89 @@
-.images{
+body {
+    height: 100vh;
+    background: radial-gradient(ellipse at bottom, #34A65F 0%, #0F8A5F 100%);
+    overflow: hidden;
+    color: white;
+    font-family: 'Inter';
+
+  
+}
+
+.img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
     position: relative;
-    left: 0;
-    bottom: 0;
-    margin: 0;
-    padding: 0;
+    z-index:1; 
+    border: 2.5px dashed #b10a0a;
+}
+
+.circle-wrapper:active .circle {
+  animation: spin 2s linear infinite;
+}
+
+.circle {
+  animation: spin 10s linear infinite;
+
+}
+
+@keyframes spin { 
+  100% { 
+    transform: rotateZ(360deg);
+  }
+}
+
+
+h1{
+    font-family: 'Cormorant', serif;
+    font-size: 50px;
+}
+
+.snowflake {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(white, white); /* Workaround for Chromium's selective color inversion */
+    border-radius: 50%;
+    filter: drop-shadow(0 0 10px white);
+}
+
+.container { 
+display: flex; 
+flex-direction: column; 
+align-items: center; 
+justify-content: center; 
+height: 100vh; 
+}
+
+
+.images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row;
+    margin-top: 50%;
+}
+
+
+
+.images img:first-child {
+    position: absolute;
+    right: 50%;
+    z-index: 2;
+}
+
+
+.images img:nth-child(2) {
+    position: absolute;
+    left: 33%;
+    z-index: 1;
+}
+
+
+.images img:nth-child(3){
+    position: absolute;
+    left: 50%;
+    z-index: 3;
     
 }
 
@@ -15,28 +95,6 @@
         transform: rotateZ(5deg);
     }
 
-}
-
-.images img:first-child {
-    position: absolute;
-    left: 0;
-    z-index: 2;
-}
-
-
-.images img:nth-child(2) {
-    position: absolute;
-    left: 15%;
-    z-index: 1;
-    top: -30px;
-}
-
-
-.images img:nth-child(3){
-    position: absolute;
-    left: 30%;
-    z-index: 3;
-    
 }
 
 @keyframes tiltAmy {
@@ -75,3 +133,4 @@
 .amy{
     width: 33%;
 }
+
