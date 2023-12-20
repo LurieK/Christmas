@@ -1,5 +1,9 @@
 .images{
     position: relative;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
     
 }
 
@@ -14,9 +18,25 @@
 }
 
 .images img:first-child {
-    z-index: 2;
     position: absolute;
+    left: 0;
+    z-index: 2;
+}
 
+
+.images img:nth-child(2) {
+    position: absolute;
+    left: 15%;
+    z-index: 1;
+    top: -30px;
+}
+
+
+.images img:nth-child(3){
+    position: absolute;
+    left: 30%;
+    z-index: 3;
+    
 }
 
 @keyframes tiltAmy {
@@ -37,10 +57,6 @@
     }
 }
 
-.images img:nth-child(3){
-    position: absolute;
-    z-index:3
-}
 
 .sarah.startTilt {
     animation: tiltSarah 1s infinite;
@@ -52,4 +68,10 @@
 
 .lurie.startTilt {
     animation: tiltLurie 1s infinite;
+}
+
+.lurie, 
+.sarah, 
+.amy{
+    width: 33%;
 }
